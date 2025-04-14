@@ -2,6 +2,13 @@ const express = require('express');
 const app = express();
 const products = require('./data/products');
 
+//↓画像を表示させる
+const express = require('express');
+const app = express();
+
+// ここでpublicフォルダの中身を配信する設定！
+app.use(express.static('public'));
+
 // 確認用ログ（アクセスされたら表示される）
 app.get('/api/products', (req, res) => {
   console.log("✅ /api/products にアクセスされました");
